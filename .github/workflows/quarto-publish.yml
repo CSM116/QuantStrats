@@ -1,0 +1,25 @@
+name: Quarto Publish
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.4.550  # or use the latest version you're using locally
+
+      - name: Render the site
+        run: quarto render reports
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports/docs
