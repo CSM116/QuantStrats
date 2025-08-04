@@ -3,3 +3,6 @@
 
 # Ignore Python bytecode cache
 __pycache__/
+datasets/
+/.quarto/
+**/site_libs/

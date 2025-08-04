@@ -1,0 +1,10 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Mid-Frequency Strategy Development"
+  navbar:
+    left:
+      - text: "Quant Signal Evaluation Framework"
+        href: Signal_Evaluation.qmd
