@@ -4,5 +4,5 @@
 # Ignore Python bytecode cache
 __pycache__/
 datasets/
-/.quarto/
+**/.quarto/
 **/site_libs/
