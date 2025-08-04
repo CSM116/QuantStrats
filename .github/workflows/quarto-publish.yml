@@ -13,7 +13,7 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.4.550  # or use the latest version you're using locally
+          version: 1.7.32
 
       - name: Render the site
         run: quarto render reports
