@@ -13,20 +13,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.7.32
-
+      
       - name: Render site
         run: quarto render reports/
-
+      
       - name: Debug publish file
+        
         run: |
           ls -la reports
           echo "---------------------"
           cat reports/_publish.yml
-
+      
       - name: Publish to GitHub Pages
         run: |
           cd reports
