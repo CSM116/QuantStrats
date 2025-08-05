@@ -29,9 +29,9 @@ jobs:
           cat reports/_publish.yml
       
       - name: Publish to GitHub Pages
-        run: |
-          cd reports
-          quarto publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          path: reports/docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
