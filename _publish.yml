@@ -4,4 +4,4 @@ project:
 
 publish:
   provider: gh-pages
-  branch: main
+  branch: gh-pages
