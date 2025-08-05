@@ -21,9 +21,16 @@ jobs:
       - name: Render site
         run: quarto render reports/
 
+      - name: Debug publish file
+        run: |
+          ls -la reports
+          echo "---------------------"
+          cat reports/_publish.yml
+
       - name: Publish to GitHub Pages
         run: |
           cd reports
           quarto publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
