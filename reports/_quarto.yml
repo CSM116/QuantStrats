@@ -7,4 +7,4 @@ website:
   navbar:
     left:
       - text: "Quant Signal Evaluation Framework"
-        href: Signal_Evaluation.qmd
+      href: Signal_Evaluation.qmd
