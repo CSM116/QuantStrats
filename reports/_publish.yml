@@ -1,7 +1,3 @@
-project:
-  type: website
-  output-dir: docs
-
 publish:
   provider: gh-pages
   branch: gh-pages
