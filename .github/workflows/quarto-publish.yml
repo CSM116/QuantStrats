@@ -22,8 +22,6 @@ jobs:
         run: quarto render reports/
 
       - name: Publish to GitHub Pages
-        run: |
-          cd reports
-          quarto publish
+        run: quarto publish gh-pages --project reports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
