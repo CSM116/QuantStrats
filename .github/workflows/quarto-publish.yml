@@ -24,6 +24,8 @@ jobs:
       - name: Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
-          path: reports  # 👈 use project root, not docs/
+          path: reports
+          project: reports
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
