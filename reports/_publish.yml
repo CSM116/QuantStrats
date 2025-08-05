@@ -1,3 +1,0 @@
-publish:
-  provider: gh-pages
-  branch: gh-pages
